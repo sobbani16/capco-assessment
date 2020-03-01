@@ -14,7 +14,7 @@
         <th class="header" *ngFor="let key of headers">{{key}}</th>
     </tr>
     <tr *ngFor="let row of data | slice:firstIndex:lastIndex">
-        <td class="data" *ngFor="let column of row | keyvalue">{{column.value}}</td>
+        <td class="data" *ngFor="let key of headers">{{row[key]}}</td>
 
     </tr>
     
