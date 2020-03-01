@@ -1,0 +1,28 @@
+<p>capco-table works!</p>
+<label for="rows">Select number of rows:</label>
+<select id="rows" (change)="changeDisplayCount($event)">
+    <option [value]="5">5</option>
+    <option [value]="10">10</option>
+    <option [value]="15">15</option>
+    <option [value]="25">25</option>
+    <option [value]="50">50</option>
+    <option [value]="100">100</option>
+  </select>
+<table>
+    <tr>
+        <!-- ***Assumption***  I used the key names as headers since it is mentioned that data might be replaced  -->
+        <th class="header" *ngFor="let key of headers">{{key}}</th>
+    </tr>
+    <tr *ngFor="let row of data | slice:firstIndex:lastIndex">
+        <td class="data" *ngFor="let column of row | keyvalue">{{column.value}}</td>
+
+    </tr>
+    
+</table>
+
+<div class="row">  
+    <div class="col-lg-8 col-md-10 ml-auto mr-auto">  
+        <div class="float-right"> <app-pagination-component [totalRecords]="recordsCount" [recordsPerPage]="recordsToshow" (onPageChange)="displayActivePage($event)"></app-pagination-component> </div>     
+        <!-- <app-pagination-component></app-pagination-component> -->
+    </div>  
+</div> 
