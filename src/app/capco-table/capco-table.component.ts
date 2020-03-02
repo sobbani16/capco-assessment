@@ -1,4 +1,4 @@
-import { allData } from './../../assets/sampledata';
+import { allData } from '../../assets/sampledata';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CapcoTableComponent implements OnInit {
 
-  activePage:number = 1;  
+  activePage = 1;
   data = [];
-  headers=[];
+  headers = [];
   recordsCount = 0;
   recordsToshow = 5;
   firstIndex = -1;
@@ -26,15 +26,15 @@ export class CapcoTableComponent implements OnInit {
     this.lastIndex = 5;
   }
 
-  displayActivePage(activePageNumber:number){  
+  displayActivePage(activePageNumber: number) {
     this.activePage = activePageNumber;
     this.firstIndex = (this.activePage - 1) * this.recordsToshow;
     this.lastIndex = (this.activePage) * this.recordsToshow;
 
-    console.log("page", this.recordsToshow)  
+    console.log(' page ', this.recordsToshow);
   }
 
-  changeDisplayCount(e){
+  changeDisplayCount(e) {
     this.recordsToshow = e.target.value;
     this.firstIndex = 0;
     this.lastIndex = this.recordsToshow;
