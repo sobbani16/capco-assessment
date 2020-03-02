@@ -1,7 +1,31 @@
+.main-header{
+    color: gray;
+    text-decoration: underline;
+    text-align: center;
+    font-style: italic;
+}
+
+.tr-header{
+}
+
+.select-rows{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .header{
     border-style: solid;
 }
 
 .data{
     border-style: solid;
+}
+
+th {
+    background: red;
+}
+
+th:nth-child(n) {
+     
+    min-width:140px;
 }

@@ -1,4 +1,17 @@
 .active {
     color:red;
-    text-decoration: line-through;
+    border: 2px solid red;
+}
+
+.pagination li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.pagination {
+    float: left;
+}
+
+.page-item {
+    text-decoration: none;
 }
