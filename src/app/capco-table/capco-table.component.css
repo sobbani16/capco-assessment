@@ -23,6 +23,8 @@
 
 th {
     background: red;
+    position: sticky;
+    top: 0;
 }
 
 th:nth-child(n) {
